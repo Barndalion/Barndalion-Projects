@@ -25,12 +25,10 @@ def molar_mass(chem_name):
 
 def calculate_molar_mass(formula):
     molar_mass = 0
-    # make it so that the code checks for letters in dictionary then return weight info to add
     chem_name = chem_name
     for atomic_weight, data in elements.items():
-
-      
-
+     if data["symbol"] == chem_name:
+      return atomic_weight,data
    
 
 ans = input("what would you like to do?")
@@ -59,18 +57,17 @@ elif ans == "find element by number":
     print("Element not found.")
 
 if ans == "molar mass":
-   chem_form = input("enter chamical formula:")
-   if chem_form in elements.items():
-      print
+   chem_name = input("enter chamical formula:")
+   chem_form = list(chem_name)
+   ans = calculate_molar_mass(chem_name)
+   for i in chem_form:
+     if i == 
+   if chem_name.isalpa:
+    print()
 
 
 
-if ans == "molar mass":
- chemical_formula = str(input())
 
-
- molar_mass = calculate_molar_mass(chemical_formula)
- print("Molar mass of", chemical_formula, "is:", molar_mass)
 
 
 
